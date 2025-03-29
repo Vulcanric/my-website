@@ -1,0 +1,24 @@
+{
+  "name": "my-website",
+  "version": "1.0.0",
+  "description": "My personal website and portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vulcanric/my-website.git"
+  },
+  "keywords": [
+    "johneric",
+    "portfolio-website",
+    "full-stack_software_developer"
+  ],
+  "author": "John Eric",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Vulcanric/my-website/issues"
+  },
+  "homepage": "https://github.com/Vulcanric/my-website#readme"
+}
