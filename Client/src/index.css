@@ -1,3 +1,5 @@
+@import url(https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css);
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,3 +13,44 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+a {
+  text-decoration: none;
+}
+
+/* .flex-row {
+  display: flex;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+.align-center {
+  align-items: center;
+}
+.gap {
+  gap: auto;
+}
+
+.w-auto {
+  width: auto;
+}
+.w-full {
+  width: auto;
+}
+
+.h-7 {
+  height: 70px;
+}
+.h-full {
+  height: 100%;
+}
+
+.border {
+  border-radius: 0 0 5px 5px;
+  box-shadow: 1px 5px rgba(0,0,0,0.3);
+}
+
+.m-x {
+  margin: 0 auto;
+} */
