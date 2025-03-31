@@ -3,7 +3,7 @@
 const Testimonials = () => {
 
     return (
-        <section className="h-full">
+        <section id="testimonials" className="h-full">
         </section>
     )
 }

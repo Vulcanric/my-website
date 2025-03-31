@@ -3,7 +3,8 @@
 const Contact = () => {
 
     return (
-        <section className="h-full border">
+        <section id="contact" className="h-full border">
+            contact
         </section>
     )
 }
