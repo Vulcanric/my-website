@@ -8,7 +8,7 @@ import Contact from "../sections/Contact";
 const Body = () => {
 
     return (
-        <div className="h-screen">
+        <div className="h-screen" style={{scrollSnapType: "mandatory"}}>
             <Hero />
             <AboutMe />
             <Services />
