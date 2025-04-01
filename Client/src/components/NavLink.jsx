@@ -1,7 +1,7 @@
 
-const NavLink = ({ to, label }) => {
+const NavLink = ({ to, label, className }) => {
     return (
-        <a href={to} >{label}</a>
+        <a href={to} className={className} >{label}</a>
     )
 }
 
