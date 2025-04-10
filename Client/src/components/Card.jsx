@@ -1,9 +1,9 @@
 
-const Card = ({ className, children }) => {
+const Card = (props) => {
 
   return (
-    <div className={className}>
-      { children }
+    <div className={props.className}>
+      { props.children }
     </div>
   )
 }
