@@ -4,9 +4,9 @@ const MenuButton = ( { onClick, className } ) => {
       className={className}
       onClick={onClick}
     >
-      <div className="bg-gray-400 h-1 rounded"></div>
-      <div className="bg-gray-400 h-1 rounded"></div>
-      <div className="bg-gray-400 h-1 rounded"></div>
+      <span className="bg-gray-400 h-1 rounded"></span>
+      <span className="bg-gray-400 h-1 rounded"></span>
+      <span className="bg-gray-400 h-1 rounded"></span>
     </button>
   )
 }
