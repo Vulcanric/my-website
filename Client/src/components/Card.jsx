@@ -2,7 +2,7 @@
 const Card = (props) => {
 
   return (
-    <div className={props.className}>
+    <div key={props.key} className={props.className}>
       { props.children }
     </div>
   )
