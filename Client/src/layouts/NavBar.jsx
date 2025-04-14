@@ -1,14 +1,29 @@
-import NavLink from "../components/NavLink"
+// import { NavLink } from "react-router-dom";
+import { useState } from "react";
+import NavLink from "../components/NavLink";
 
-const NavBar = ( {className, childClass} ) => {
-    return (
-      <div className={className}>
-        <NavLink label="About me" to="#about" className={childClass} />
-        <NavLink label="Services" to="#services" className={childClass} />
-        <NavLink label="My work" to="#work" className={childClass} />
-        <NavLink label="Testimonials" to="#testimonials" className={childClass} />
-        <NavLink label="Contact me" to="#contact" className={childClass} />
-      </div>
-    )
+const NavBar = ( {className, tabClass, items} ) => {
+  const [activeId, setActiveId] = useState(null);
+
+  return (
+    <div className={className}>
+      {
+        items.map((item) => {
+          return (
+            <NavLink
+              key={item.id}
+              id={item.id}
+              to={item.link}
+              isActive={activeId === item.id}
+              onClick={() => setActiveId(item.id)}
+              className={tabClass}
+            >
+              {item.label}
+            </NavLink>
+          )
+        })
+      }
+    </div>
+  )
 }
 export default NavBar
