@@ -80,7 +80,7 @@ const Work = () => {
                 <br />
                 <div className="">
                   <h2 className="sm:block md:hidden text-3xl font-bold">{work.title}<br /></h2>
-                  <p contentEditable className="text-pretty text-wrap border text-lg">{work.description}</p>
+                  <p className="text-pretty text-wrap border text-lg">{work.description}</p>
                   <br />
                   <div className="flex justify-between">
                     <button className="border px-8 py-2 bg-blue-200 rounded-xl">GitHub</button>
