@@ -7,7 +7,9 @@ const NavBar = ( {className, linkClass, linkOnClick, items} ) => {
 
   function handleLinkClick(id) {
     setActiveId(id);
-    linkOnClick();
+    if (linkOnClick) {
+      linkOnClick()
+    }
   }
 
   return (
@@ -17,7 +19,6 @@ const NavBar = ( {className, linkClass, linkOnClick, items} ) => {
           return (
             <NavLink
               key={item.id}
-              id={item.id}
               to={item.link}
               isActive={activeId === item.id}
               onClick={() => handleLinkClick(item.id)}
