@@ -9,7 +9,7 @@ import Contact from "../sections/Contact";
 const Body = () => {
 
     return (
-        <div id="content" className="h-screen" style={{scrollSnapType: "mandatory"}}>
+        <div id="app-body" className="h-screen" style={{scrollSnapType: "mandatory"}}>
             <Hero />
             <AboutMe />
             <Services />
