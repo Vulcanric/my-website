@@ -37,31 +37,19 @@ html {
   overflow:hidden;
 }
 
-#content {
-  overflow-y: scroll;
+#app-body {
+  overflow: hidden scroll;
 }
 
 .shadow {
   box-shadow: 3px 2px 6px rgba(0,0,0,0.1);
 }
-.control {
+.slide-control {
   transition: 0.6s ease;
 }
-.control:active {
+.slide-control:active {
   background-color: #e8e8e8;
-  transition: 0.2s ease;
-}
-.w-fit {
-  width: fit-content !important;
-}
-.flex {
-  display: flex !important;
-}
-.w-full {
-  width: 100% !important;
-}
-.h-full {
-  height: 100% !important;
+  transition: 0.2s background-color ease;
 }
 /* Every element in the .group-hover:block class should be visible when any element
 in its group is hovered upon */
@@ -71,6 +59,11 @@ a.group-hover\:block:hover {
 a.group-hover\:block:hover ~ svg.group-hover\:block {
   display: block;
 }
+
+/* .text-pretty {
+  text-wrap: wrap pretty !important;
+  text-align: center;
+} */
 /* }
 .transition-opacity {
   transition: 0.2s background-color ease;
