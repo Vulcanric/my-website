@@ -4,8 +4,8 @@ const Contact = () => {
 
     return (
         <section id="contact" className="h-full border">
-            contact
+            <h2>Contact me</h2>
         </section>
     )
 }
-export default Contact
+export default Contact;
