@@ -1,8 +1,8 @@
-const AppScreen = ({ picture, linkTo, width, height }) => {
+const AppScreen = ({ picture, linkTo, alt, width, height }) => {
 
   return (
     <div className="relative rounded-2xl border-2 overflow-hidden cursor-pointer" style={{width: `${width}px`, height: `${height}px`}}>
-      <img src={picture} alt="Remotely" className=" w-full h-full" />
+      <img src={picture} alt={alt} className=" w-full h-full" />
       <a
         href={linkTo}
         target="blank_"
