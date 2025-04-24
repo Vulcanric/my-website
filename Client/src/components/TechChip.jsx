@@ -1,17 +1,21 @@
 import StackIcon from "tech-stack-icons";
 
 
-const TechChip = ({ name }) => {
+const TechChip = ({ name, key }) => {
   return (
-    <div className="w-10 h-5 rounded-lg">
+    <div
+      key={key}
+      className="w-30 h-fit flex px-3 py-2 gap-2 border rounded-full"
+    >
       <StackIcon
         name={name
           .toLowerCase()
           .replace('.', '')
           .replace(' ', '')
         }
+        className="w-5"
       />
-      <p>{name}</p>
+      <p className="text-sm">{name}</p>
     </div>
   )
 }
