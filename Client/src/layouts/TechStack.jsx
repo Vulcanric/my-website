@@ -4,7 +4,7 @@ import StackIcon from "tech-stack-icons";
 const TechStack = () => {
   const techSkills = [
     {name: "Python", iconName: "python", wiki: "https://en.wikipedia.org/wiki/Python_(programming_language)"},
-    {name: "C / C++", iconName: "c++", wiki: "https://en.wikipedia.org/wiki/C_(programming_language)"},
+    {name: "C", iconName: "c++", wiki: "https://en.wikipedia.org/wiki/C_(programming_language)"},
     {name: "TypeScript", iconName: "typescript", wiki: "https://en.wikipedia.org/wiki/TypeScript"},
     {name: "Bash", iconName: "bash", wiki: "https://en.wikipedia.org/wiki/Bash_(Unix_shell)"},
     {name: "HTML5", iconName: "html5", wiki: "https://en.wikipedia.org/wiki/HTML5"},
@@ -36,8 +36,9 @@ const TechStack = () => {
             <a
               key={index}
               href={tech.wiki}
+              title="Click to open"
               target="blank_"
-              className="flex flex-col items-center gap-5 border hover:shadow rounded-lg p-5 cursor-pointer"
+              className="flex flex-col items-center gap-5 border shadow-lg hover:bg-gray-100 rounded-lg p-5 cursor-pointer"
             >
               <StackIcon name={tech.iconName} className="w-11" />
               {tech.name}
