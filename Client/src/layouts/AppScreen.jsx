@@ -1,14 +1,14 @@
 const AppScreen = ({ picture, linkTo, alt, width, height }) => {
 
   return (
-    <div className="relative rounded-2xl border-2 overflow-hidden cursor-pointer" style={{width: `${width}px`, height: `${height}px`}}>
+    <div className="relative rounded-3xl border-2 overflow-hidden cursor-pointer" style={{width: `${width}px`, height: `${height}px`}}>
       <img src={picture} alt={alt} className=" w-full h-full" />
       <a
         href={linkTo}
         target="blank_"
         className="absolute top-0 left-0 w-full
         h-full hover:bg-black opacity-50 transition-opacity
-        group-hover:block rounded-2xl"
+        group-hover:block"
       >
       </a>
       <svg
