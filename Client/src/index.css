@@ -1,5 +1,6 @@
-@import url(https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css);
-@import 'tailwindcss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
   margin: 0;
@@ -50,6 +51,9 @@ html {
 .slide-control:active {
   background-color: #e8e8e8;
   transition: 0.2s background-color ease;
+}
+.form-container {
+  width: 400px;
 }
 /* Every element in the .group-hover:block class should be visible when any element
 in its group is hovered upon */
