@@ -4,48 +4,36 @@ import NavBar from "./NavBar";
 import MenuButton from "../components/MenuButton";
 
 const Header = () => {
-  const [menu, setMenu] = useState(false);
-
-  const navItems = [
-    {label: "About me", link: "#about", id: 1},
-    {label: "Services", link: "#services", id: 2},
-    {label: "My work", link: "#work", id: 3},
-    {label: "Testimonials", link: "#testimonials", id: 4},
-    {label: "Contact me", link: "#contact", id: 5}
-  ]
+  const [isMenu, setMenu] = useState(false);
 
   return (
-    <div className="w-full h-20 flex flex-col items-center border justify-center fixed md:bg-transparent z-10" >
-      <div className="w-full h-full flex items-center sm:justify-between md:justify-start border bg-white bg-opacity-75">
-        <a href="#home">
-          <Logo size={50} className="m-5" description="John Eric" />
+    <div className="w-full h-26 flex flex-col items-center justify-center fixed md:bg-transparent z-10" >
+      <div className="w-full h-full my-8 flex items-center justify-between md:justify-start relative">
+        <a href="/">
+          <code className="block left-5 top-0 px-10 text-4xl text-white font-bold absolute"><span className="text-[#FF7F50]">E</span><br/><span className="text-[#0099FF] text-right">J</span></code>
+          {/* <Logo size={50} className="m-5 bg-transparent" description="John Eric" /> */}
         </a>
         <NavBar
-          className="sm:hidden md:flex lg:flex justify-center items-center gap-12 mx-auto"
+          className="hidden md:flex justify-center items-center gap-12 mx-auto"
           linkClass={
             (isActive) =>
-              isActive ? "text-lg font-thin underline" : "text-lg font-thin hover:underline"
+              isActive ? "text-lg pt-6 text-white" : "text-lg text-white hover:pt-8 keypad-motion"
           }
-          items={navItems}
         />
         <MenuButton
-          onClick={() => setMenu(!menu)}
-          className="w-8 h-6 mx-6 flex flex-col cursor-pointer justify-between md:hidden lg:hidden z-10"
+          onClick={() => setMenu(!isMenu)}
+          className="size-14 mx-6 flex flex-col cursor-pointer gap-2 md:hidden z-10 relative"
+          isOpen={isMenu}
         />
       </div>
-      {
-        menu && (
-          <NavBar
-            className="bg-white flex flex-col border w-full h-screen top-0 items-center justify-evenly py-12 absolute"
-            linkClass={
-              (isActive) =>
-                isActive ? "text-3xl underline" : "text-3xl hover:underline"
-            }
-            linkOnClick={() => setMenu(false)}
-            items={navItems}
-          />
-        )
-      }
+      <NavBar
+        className={`transition-[transform] ease-out ${isMenu ? "translate-x-[0%]" : "-translate-x-[100%]"} duration-1000 bg-black/90 flex flex-col w-full h-screen top-0 items-center justify-evenly py-12 absolute`}
+        linkClass={
+          (isActive) =>
+            isActive ? "text-3xl text-white pr-10" : "w-60 text-right hover:pr-10 text-3xl text-white keypad-motion"
+        }
+        linkOnClick={() => setMenu(false)}
+      />
     </div>
   )
 }
