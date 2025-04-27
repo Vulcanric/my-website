@@ -10,13 +10,18 @@ const Testimonials = () => {
 
   return (
     <section id="testimonials" className="border flex flex-col items-center p-8 relative">
-      <h2 className="text-4xl font-bold mt-6 mb-11">Testimonials</h2>
+      <h2 className="text-5xl mt-6 mb-11">Testimonials</h2>
       <Carousel items={testimonials} />
-      <p className="text-xl">Have you worked with me before? I'm very excited to see your review 🥳</p>
+      <div>
+        <div className="w-10 h-10 border inline"/>
+        Or
+        <div className="w-10 h-10 border inline"/>
+      </div>
+      <br />
       <button
-        className="text-white border border-blue-500 bg-blue-500 hover:bg-blue-400 px-4 py-3 text-xl rounded-xl"
+        className="text-white border border-blue-700 bg-blue-500 hover:bg-blue-600 px-4 py-3 text-xl rounded-xl"
       >
-        Give your testimonial
+        Give your review
       </button>
     </section>
   )
