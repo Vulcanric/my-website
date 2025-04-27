@@ -18,7 +18,7 @@ const Work = () => {
         "HTML5",
         "CSS3",
         "React.js",
-        "Tailwindcss",
+        "TailwindCSS",
         "Nest.js",
         "Firebase",
       ],
@@ -54,7 +54,7 @@ const Work = () => {
 
   return (
     <section id="work" className="flex flex-col items-center px-8 py-10 border">
-      <h2 className="text-4xl font-bold mt-6 mb-11">My work</h2>
+      <h2 className="text-5xl mt-6 mb-11">My work</h2>
       <br />
       <br />
       <div className="flex flex-wrap items-center justify-center gap-10">
