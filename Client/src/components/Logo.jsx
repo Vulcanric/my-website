@@ -1,4 +1,4 @@
-import me from "../assets/images/me.jpg";
+import me from "../assets/images/me.png";
 
 const Logo = (props) => {
 
