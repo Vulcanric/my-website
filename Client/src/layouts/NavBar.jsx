@@ -2,8 +2,17 @@
 import { useState } from "react";
 import NavLink from "../components/NavLink";
 
-const NavBar = ( {className, linkClass, linkOnClick, items} ) => {
+const NavBar = ( {className, linkClass, linkOnClick} ) => {
   const [activeId, setActiveId] = useState(null);
+
+  const navItems = [
+    "home",
+    "about",
+    "services",
+    "work",
+    "testimonials",
+    "contact",
+  ]
 
   function handleLinkClick(id) {
     setActiveId(id);
@@ -15,16 +24,17 @@ const NavBar = ( {className, linkClass, linkOnClick, items} ) => {
   return (
     <div className={className}>
       {
-        items.map((item) => {
+        navItems.map((item, id) => {
           return (
             <NavLink
-              key={item.id}
-              to={item.link}
-              isActive={activeId === item.id}
-              onClick={() => handleLinkClick(item.id)}
+              key={id}
+              to={`#${item}`}
+              isActive={activeId === id}
+              onClick={() => handleLinkClick(id)}
               className={linkClass}
             >
-              {item.label}
+              <code className="block text-right text-sm">{'0' + (id + 1)}</code>
+              <code>/ </code>{item}
             </NavLink>
           )
         })
