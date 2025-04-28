@@ -8,16 +8,16 @@ const Header = () => {
 
   return (
     <div className="w-full h-26 flex flex-col items-center justify-center fixed md:bg-transparent z-10" >
-      <div className="w-full h-full my-8 flex items-center justify-between md:justify-start relative">
+      <div className="w-full h-28 flex items-center justify-between md:justify-start relative">
         <a href="/">
-          <code className="block left-5 top-0 px-10 text-4xl text-white font-bold absolute"><span className="text-[#FF7F50]">E</span><br/><span className="text-[#0099FF] text-right">J</span></code>
+          <code className="block left-4 top-1/4 px-10 text-4xl text-white font-bold absolute"><span className="text-[#FF7F50]">E</span><br/><span className="text-[#0099FF] text-right">J</span></code>
           {/* <Logo size={50} className="m-5 bg-transparent" description="John Eric" /> */}
         </a>
         <NavBar
           className="hidden md:flex justify-center items-center gap-12 mx-auto"
           linkClass={
             (isActive) =>
-              isActive ? "text-lg pt-6 text-white" : "text-lg text-white hover:pt-8 keypad-motion"
+              isActive ? "text-lg pt-8 text-white" : "text-lg text-white hover:pt-8 keypad-motion"
           }
         />
         <MenuButton
