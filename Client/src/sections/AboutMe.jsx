@@ -6,20 +6,24 @@ const AboutMe = () => {
   return (
     <section
       id="about"
-      className="bg-[#333333] w-full py-8 px-20 flex flex-col items-center overflow-y-visible"
+      className="bg-[#222222] w-full py-8 px-10 flex flex-col items-center overflow-y-visible"
       style={{scrollSnapAlign: "start"}}
     >
       <h1 className="text-4xl text-white font-bold mt-5 mb-11">About me</h1>
+      <div className="flex flex-col md:flex-row justify-center">
       <Logo
         size={200}
         className="rounded-4xl border rounded-full p-2 bg-white"
       />
       <br />
-      <p className="text-pretty text-wrap border text-lg">Hello, I'm Eric! I'm a full-stack software developer with experience in Python, TypeScript, SQL, and noSQL. I've built and maintained web applications from the ground up, focusing on clean, effective, and scalable code.</p>
+      <div className="md:w-1/2">
+     <p className="text-pretty text-wrap text-lg text-white"><b className="text-xl">Hello 👋</b>, I'm <b>Eric</b>! A full-stack software developer with experience in Python, TypeScript, React, SQL, and noSQL databases. I've built and maintained web applications from the ground up, focusing on clean, effective, and scalable code.</p>
       <br />
-      <p className="text-pretty text-wrap border text-lg">My journey started at a young age, driven by a love for problem-solving and creating innovative solutions. Recently, I've been working on a project that leverages OCR and image-based product detection, applying modern technologies to real-world challenges. I'm commited to continuous learning and excited about any opportunity to collaborate and make a difference through tech.</p>
+      <p className="text-pretty text-wrap text-lg text-white">My journey started at a young age, driven by a love for problem-solving and creating innovative solutions. Recently, I've been working on a project that leverages OCR and image-based product detection, applying modern technologies to real-world challenges. I'm commited to continuous learning and excited about any opportunity to collaborate and make a difference through tech.</p>
       <br />
-      <p className="text-pretty text-wrap border text-lg">I never stop learning: life-long learning is my foundation. I stay curious, adapt quickly to change, and continuously refine my skills to remain relevant in this ever-evolving industry.</p>
+      <p className="text-pretty text-wrap text-lg text-white">I never stop learning: life-long learning is my foundation. I stay curious, adapt quickly to change, and continuously refine my skills to remain relevant in this ever-evolving industry.</p>
+      </div>
+      </div>
       <br />
       <Card
         className="border my-10 w-96 h-80 shadow-md flex items-center justify-center"
