@@ -22,7 +22,7 @@ const Header = () => {
         />
         <MenuButton
           onClick={() => setMenu(!isMenu)}
-          className="size-14 mx-6 flex flex-col cursor-pointer gap-2 md:hidden z-10 relative"
+          className="size-12 mx-6 flex flex-col cursor-pointer gap-2 md:hidden z-10 relative"
           isOpen={isMenu}
         />
       </div>
