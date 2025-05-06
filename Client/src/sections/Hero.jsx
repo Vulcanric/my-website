@@ -1,14 +1,17 @@
-import BACKGROUND from '../assets/images/3D.png';
+import DESKTOP_BG from '../assets/images/3D.png';
+import MOBILE_BG1 from '../assets/images/3D-mobile.png';
+import MOBILE_BG2 from '../assets/images/3D-mobile1.png';
 
 const Hero = () => {
 
   return (
-    <section id="home" style={{
-        backgroundImage: `url(${BACKGROUND})`,
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover'
+    <section id="home"
+      style={{
+        backgroundImage: `url(${MOBILE_BG1})`,
+        backgroundPosition: 'left',
+        // backgroundAttachment: 'fixed'
       }}
-      className="h-screen w-full bg-[#333333] flex flex-col items-center justify-end gap-4 relative"
+      className={`h-screen w-full bg-[url(${MOBILE_BG2})] md:bg-[url(${DESKTOP_BG})] bg-no-repeat bg-cover flex flex-col items-center justify-end gap-4 relative`}
     >
       <h1 className="text-9xl font-bold text-center text-slate-300 drop-shadow-xl">ERIC JOHN</h1>
       <p className="text-2xl text-center text-slate-200 font-bold backdrop-blur-xl">SOFTWARE ENGINEER, BACKEND & WEB DEVELOPER</p>
@@ -20,14 +23,17 @@ const Hero = () => {
           className='w-2 h-4 bg-white rounded-full animate-scroll'
         />
       </div>
-      <div className="fixed right-3 top-1/4 bg-gray-800 p-1 rounded-full flex items-center justify-start w-14 overflow-x-hidden cursor-pointer">
-        <span
-          className="text-2xl hover:bg-gray-700 p-2 rounded-full"
-	>
-	⭐
-	</span>
-	<span className="text-white text-2xl">Star</span>
-      </div>
+      <a
+        target='_blank'
+        href="https://github.com/vulcanric/my-website/"
+        className="fixed right-0 top-1/4 z-20"
+      >
+        <div
+          className="w-11 hover:w-24 overflow-x-hidden transition-[width] ease-in-out duration-[0.4s] flex gap-3 pl-3 pr-5 py-2 bg-gray-800 text-white font-bold rounded-l-lg"
+        >
+	        <span>⭐</span>STAR
+        </div>
+      </a>
       <br />
       <div className='flex gap-10 mb-36'>
         <a href="https://x.com/JohnEri89510617">
