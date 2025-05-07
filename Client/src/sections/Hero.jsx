@@ -1,19 +1,11 @@
-import DESKTOP_BG from '../assets/images/3D.png';
-import MOBILE_BG1 from '../assets/images/3D-mobile.png';
-import MOBILE_BG2 from '../assets/images/3D-mobile1.png';
 
 const Hero = () => {
 
   return (
     <section id="home"
-      style={{
-        backgroundImage: `url(${MOBILE_BG1})`,
-        backgroundPosition: 'left',
-        // backgroundAttachment: 'fixed'
-      }}
-      className={`h-screen w-full bg-[url(${MOBILE_BG2})] md:bg-[url(${DESKTOP_BG})] bg-no-repeat bg-cover flex flex-col items-center justify-end gap-4 relative`}
+      className="h-screen w-full bg-left-top bg-[url('/3D-mobile1.png')] md:bg-[url('/3D-desktop.png')] bg-no-repeat bg-cover flex flex-col items-center justify-end gap-4 relative"
     >
-      <h1 className="text-9xl font-bold text-center text-slate-300 drop-shadow-xl">ERIC JOHN</h1>
+      <h1 className="text-9xl font-bold text-center text-slate-200 drop-shadow-xl">ERIC JOHN</h1>
       <p className="text-2xl text-center text-slate-200 font-bold backdrop-blur-xl">SOFTWARE ENGINEER, BACKEND & WEB DEVELOPER</p>
       <div
         className='border-2 border-white w-7 h-12 rounded-full hover:cursor-pointer flex flex-col items-center py-1 absolute bottom-8'
