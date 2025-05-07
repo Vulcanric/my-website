@@ -7,7 +7,8 @@ const Header = () => {
   const [isMenu, setMenu] = useState(false);
 
   return (
-    <div className="w-full h-26 flex flex-col items-center justify-center fixed md:bg-transparent z-10" >
+    <div id="app-header" className="w-full h-26 flex flex-col items-center justify-center absolute top-0 md:bg-transparent z-10" >
+      <div className="bar h-1 bg-white"></div>
       <div className="w-full h-28 flex items-center justify-between md:justify-start relative">
         <a href="/">
           <code className="block left-4 top-1/4 px-10 text-4xl text-white font-bold absolute"><span className="text-[#FF7F50]">E</span><br/><span className="text-[#0099FF] text-right">J</span></code>
