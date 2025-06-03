@@ -22,7 +22,7 @@ a {
 }
 
 html {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 * {
@@ -31,7 +31,8 @@ html {
 }
 
 #home {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: Calibri;
+  /* bg-[#0c1217] */
 }
 
 .shadow {
@@ -61,17 +62,24 @@ a.group-hover\:block:hover ~ svg.group-hover\:block {
   transition: 0.2s background-color ease;
 } */
 
-@media (min-width: 768px) { /* >= Medium screen */
-  #app-header {
-    animation: scroll-slidein 0.3s linear 0s 1;
-    animation-timeline: view(50%, 0%);
-  }
-  @keyframes scroll-slidein {
-    to {
-      position: fixed;
-    }
-  }  
+/* #app-header {
+  /* animation: slide-in 2.5s 0s 1 forwards;
+  animation-name: slide-in;
+  animation-duration: 2.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
+@keyframes slide-in {
+  from {
+    position: absolute;
+    top: -100%;
+  } to {
+    top: 0%;
+    position: fixed;
+  }  
+} */
+
+
 
 .transition-display {
   transition: 0.6s display ease;
