@@ -7,15 +7,17 @@ const Header = () => {
   const [isMenu, setMenu] = useState(false);
 
   return (
-    <div id="app-header" className="w-full h-26 flex flex-col items-center justify-center absolute top-0 md:bg-transparent z-10" >
-      <div className="bar h-1 bg-white"></div>
-      <div className="w-full h-28 flex items-center justify-between md:justify-start relative">
+    <div
+      id="app-header"
+      className="w-full h-26 flex flex-col items-center justify-center fixed"
+    >
+      <div className="w-full h-28 flex items-center justify-between lg:justify-start relative">
         <a href="/">
           <code className="block left-4 top-1/4 px-10 text-4xl text-white font-bold absolute"><span className="text-[#FF7F50]">E</span><br/><span className="text-[#0099FF] text-right">J</span></code>
           {/* <Logo size={50} className="m-5 bg-transparent" description="John Eric" /> */}
         </a>
         <NavBar
-          className="hidden md:flex justify-center items-center gap-12 mx-auto"
+          className="hidden lg:flex justify-center items-center gap-12 mx-auto"
           linkClass={
             (isActive) =>
               isActive ? "text-lg pt-8 text-white" : "text-lg text-white hover:pt-8 keypad-motion"
@@ -23,7 +25,7 @@ const Header = () => {
         />
         <MenuButton
           onClick={() => setMenu(!isMenu)}
-          className="size-12 mx-6 flex flex-col cursor-pointer gap-2 md:hidden z-10 relative"
+          className="size-12 mx-6 flex flex-col cursor-pointer gap-2 lg:hidden z-10 relative"
           isOpen={isMenu}
         />
       </div>
