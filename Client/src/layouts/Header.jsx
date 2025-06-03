@@ -7,11 +7,8 @@ const Header = () => {
   const [isMenu, setMenu] = useState(false);
 
   return (
-    <div
-      id="app-header"
-      className="w-full h-26 flex flex-col items-center justify-center fixed"
-    >
-      <div className="w-full h-28 flex items-center justify-between lg:justify-start relative">
+    <div className="w-full h-26 flex flex-col items-center justify-center fixed md:bg-transparent z-10" >
+      <div className="w-full h-28 flex items-center justify-between md:justify-start relative">
         <a href="/">
           <code className="block left-4 top-1/4 px-10 text-4xl text-white font-bold absolute"><span className="text-[#FF7F50]">E</span><br/><span className="text-[#0099FF] text-right">J</span></code>
           {/* <Logo size={50} className="m-5 bg-transparent" description="John Eric" /> */}
