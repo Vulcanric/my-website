@@ -1,5 +1,6 @@
 import Card from "../components/Card"
 import Logo from "../components/Logo"
+import { motion } from "framer-motion"
 
 const AboutMe = () => {
 
@@ -7,7 +8,7 @@ const AboutMe = () => {
     <section
       id="about"
       className="w-full py-8 px-10 flex flex-col items-center overflow-y-visible relative"
-      style={{scrollSnapAlign: "start"}}
+      // style={{scrollSnapAlign: "start"}}
     >
       <h1 className="text-5xl text-white font-bold mt-5 mb-14">About me</h1>
       <Logo
@@ -29,14 +30,22 @@ const AboutMe = () => {
       >
         <button className="text-2xl w-12 h-12 rounded-full border bg-white hover:bg-gray-50 active:bg-gray-200 shadow-md"><span>+</span></button>
       </Card>
-      <div
-        className='border-2 border-white w-7 h-12 rounded-full hover:cursor-pointer flex flex-col items-center py-1 absolute -top-24'
+      <motion.div
+        className='bg-white size-4 rounded-full hover:cursor-pointer absolute -top-30'
         onClick={() => {document.location.href = '#about'}}
+        initial={{ y: 45 }}
+        animate={{ opacity: [1, 1, 1, 0], y: 0 }}
+        transition={{
+          duration: 0.8,
+          repeat: Infinity,
+          repeatType: "loop",
+          repeatDelay: 0.3,
+          ease: "easeInOut"
+        }}
+        whileHover={{ scale: 1.2 }}
+        whileTap={{ scale: 0.9 }}
       >
-        <div 
-          className='w-2 h-4 bg-white rounded-full animate-scroll'
-        />
-      </div>
+      </motion.div>
     </section>
   )
 }

@@ -9,7 +9,7 @@ import Contact from "../sections/Contact";
 const Body = () => {
 
     return (
-        <div id="content" className="w-full bg-[#000]">
+        <div id="content" className="w-full h-screen bg-[#000]">
             <Hero />
             <AboutMe />
             <Services />
